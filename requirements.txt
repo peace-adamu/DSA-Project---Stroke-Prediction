@@ -1,0 +1,5 @@
+# This file lists the Python package dependencies for the project.
+scikit-learn==1.42.2
+pandas==2.2.2
+numpy==2.0.2
+joblib==1.5.1
