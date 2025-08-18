@@ -3,8 +3,8 @@
 
 
 ##  Table of Contents
-- [Project Preview](#project-preview.)
 - [Acknowledgments](#acknowledgments)
+-  [Project Preview](#project-preview.)
 - [Project Objective](#project-objective)
 - [Project Significance](#project-significance)
 - [Methodology](#methodology)
@@ -69,28 +69,14 @@ Automation in healthcare: Shows how AI can supplement professional workflows for
 - Logistic Regression
 - Decision Tree
 - XGBoost
-- Final Selection: The XGBoost Classifier outperformed others in terms of accuracy, recall, and generalization. It was optimized with:
-- L1/L2 regularization
-- Reduced max depth
-- Cross-validation with 10 Stratified folds
+
 5:  Evaluation Metrics
-. Performance was measured using accuracy, precision, recall, and F1-score.
-- Metric	Train Score	Test Score	Gap
-- Accuracy	0.9714	0.9643	✅ 0.0072
-- Precision	0.9944	0.9870	✅ 0.0073
-- Recall	0.9481	0.9407	✅ 0.0074
-- F1 Score	0.9707	0.9633	✅ 0.0074
+- Performance was measured using accuracy, precision, recall, and F1-score.
 - This tight generalization gap indicates minimal overfitting and strong model stability.
 6: Model Interpretation
 - To ensure explainability:
 - SHAP (SHapley Additive exPlanations) was used to visualize global and individual feature importance.
 - LIME (Local Interpretable Model-agnostic Explanations) was used to explain predictions for single cases.
-    - Top Influential Features:
-    - Average Glucose Level
-    - BMI
-    - Heart Disease
-    - Age
-    - Smoking Status
 7: Web App Deployment with Streamlit
 
 
@@ -109,3 +95,36 @@ pip install streamlit pandas numpy scikit-learn xgboost joblib
 
 
 ## Discussion of result
+Table 1.0: Cross-Validation Performance of ML Models for Stroke Prediction
+| Model                   | Train Accuracy | Train F1  | Train Precision | Train Recall | Test Accuracy | Test F1  | Test Precision | Test Recall |
+|-------------------------|---------------:|----------:|----------------:|-------------:|--------------:|---------:|---------------:|------------:|
+| Logistic Regression     | 0.7940         | 0.8017    | 0.7710          | 0.8350       | 0.7906        | 0.8008   | 0.7710         | 0.8330      |
+| Decision Tree           | 1.0000         | 1.0000    | 1.0000          | 1.0000       | 0.9434        | 0.9446   | 0.9351         | 0.9542      |
+| Random Forest           | 1.0000         | 1.0000    | 1.0000          | 1.0000       | 0.9727        | 0.9726   | 0.9884         | 0.9572      |
+| K-Nearest Neighbors     | 0.9141         | 0.9196    | 0.8626          | 0.9845       | 0.8981        | 0.9074   | 0.8391         | 0.9878      |
+| Support Vector Machine  | 0.7707         | 0.7844    | 0.7386          | 0.8363       | 0.7623        | 0.7764   | 0.7399         | 0.8167      |
+| Gradient Boosting       | 0.9680         | 0.9671    | 0.9927          | 0.9428       | 0.9630        | 0.9624   | 0.9872         | 0.9389      |
+| XGBoost                 | 0.9990         | 0.9990    | 1.0000          | 0.9979       | 0.9702        | 0.9701   | 0.9812         | 0.9593      |
+
+The findings establish a preliminary benchmark for choosing the most appropriate model by taking into account not just statistical performance but also interpretability and robustness. Conducting further analysis with SHAP and LIME interpretation methods for these models will aid in revealing how each model makes its predictions and the trustworthiness of these results in practical situations.
+
+As displayed in Table 1.0, the Random Forest, Decision Tree, and XGBoost models all achieved flawless classification performance, reaching 100% across all assessed metrics. This outcome suggests either an outstanding model fit or possible data leakage or overfitting, which necessitates careful scrutiny.
+On the other hand, the XG Boost, while not perfect, achieved very high scores across all metrics, with:
+| Metric     | Train Score | Test Score | Gap    |
+|------------|------------:|-----------:|-------:|
+| Accuracy   | 0.9990      | 0.9676     | 0.0317 |
+| Precision  | 1.0000      | 0.9782     | 0.0218 |
+| Recall     | 0.9979      | 0.9564     | 0.0422 |
+| F1 Score   | 0.9990      | 0.9671     | 0.0321 | 
+
+The XG Boost model showed strong generalization capabilities, exhibiting a high recall rate that suggests few false negatives, an especially important factor in medical screening tasks like predicting hypertension. These results are consistent with earlier research that highlights GBM’s ability to capture intricate, non-linear relationships in structured data with significant predictive accuracy. - Final Selection: The XGBoost Classifier outperformed others in terms of accuracy, recall, and generalization. It was optimized with: L1/L2 regularization, Reduced max depth, Cross-validation with 10 Stratified folds. 
+
+To ensure explainability:
+- SHAP (SHapley Additive exPlanations) was used to visualize global and individual feature importance.
+- LIME (Local Interpretable Model-agnostic Explanations) was used to explain predictions for single cases.
+    - Top Influential Features:
+    - Average Glucose Level
+    - BMI
+    - Heart Disease
+    - Age
+    - Smoking Status
