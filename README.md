@@ -1,6 +1,6 @@
 
 # Digital SkillUp Africa Stroke Risk Prediction App — Project Documentation
-<img width="2962" height="1030" alt="DSA Logo C1" src="https://github.com/user-attachments/assets/f39d7289-0d63-47e5-857a-6adcdd64ab08" />
+<img width="2962" height="1030" alt="DSA Logo C1" src="https://dsa-project---stroke-prediction-mssxugdw9th9epkznevsdb.streamlit.app" />
 
 ### Stroke Prediction App 
 
