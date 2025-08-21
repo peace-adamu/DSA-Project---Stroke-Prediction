@@ -1,12 +1,12 @@
-# Stroke Prediction App 🧠
-
-[![Streamlit App](https://img.shields.io/badge/Live-App-green)](https://dsa-project---stroke-prediction.streamlit.app)
-
-A machine learning app that predicts stroke risk based on user input...
 
 # Digital SkillUp Africa Stroke Risk Prediction App — Project Documentation
 <img width="2962" height="1030" alt="DSA Logo C1" src="https://github.com/user-attachments/assets/f39d7289-0d63-47e5-857a-6adcdd64ab08" />
 
+### Stroke Prediction App 
+
+[![Streamlit App](https://img.shields.io/badge/Live-App-green)](https://dsa-project---stroke-prediction.streamlit.app)
+
+A machine learning app that predicts stroke risk based on user input...
 
 ##  Table of Contents
 - [Acknowledgments](#acknowledgments)
