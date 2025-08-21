@@ -136,3 +136,11 @@ To ensure explainability:
     - Heart Disease
     - Age
     - Smoking Status
+
+ ## Conclusion
+ The Stroke Risk Prediction App demonstrates the practical application of machine learning in healthcare screening. While not a replacement for medical evaluation, it:
+- Encourages awareness of key health indicators
+- Shows how automated systems can assist in preventive healthcare
+- Serves as an educational showcase for data preprocessing, model training, and web deployment
+- SHAP (SHapley Additive exPlanations) was used to visualize global and individual feature importance.
+- LIME (Local Interpretable Model-agnostic Explanations) was used to explain predictions for single cases.
