@@ -90,13 +90,8 @@ if submit:
     # Display result
     if pred == 1:
         st.error(f"⚠️ High Stroke Risk — Probability: {prob:.2%}")
-    else:
-        st.success(f"✅ Low Stroke Risk — Probability: {prob:.2%}")
-
-    # Display result
-    if pred == 1:
-        st.error(f"⚠️ High Stroke Risk — Probability: {prob:.2%}")
         st.write("🩺 **Conclusion:** The patient is likely to experience a stroke.")
     else:
         st.success(f"✅ Low Stroke Risk — Probability: {prob:.2%}")
         st.write("🩺 **Conclusion:** The patient is unlikely to experience a stroke.")
+
